@@ -1,0 +1,57 @@
+h1{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    
+ 
+   
+}
+.heading{
+    text-align: center;
+}
+h1::after{
+    content: '';
+    bottom: 0;
+    left: 0;
+    background: red;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    transform: translateY(20px);
+    transition: .5s;
+ 
+}
+h1:hover::after{
+    width: 233px;
+}
+
+.photo-frame{
+     width: 300px;
+     height: 200px;
+     border: 10px gray solid;
+     position: relative;
+     margin: auto;
+    
+ }
+img{
+    width: 100%;
+    height: 200px;
+}
+.photo-detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    visibility: hidden;
+    width: 0;
+    transition: .5s;
+}
+
+.photo-frame:hover .photo-detail{
+    visibility: visible;
+    background: rgba(214, 36, 36, 0.3);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
